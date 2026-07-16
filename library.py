@@ -193,3 +193,36 @@ def delete_book():
             return
 
     print("\nBook not found.\n")
+
+    # ----------------------------
+# Update Book
+# ----------------------------
+def update_book():
+
+    books = load_books()
+
+    book_id = input("Enter Book ID to update: ")
+
+    for book in books:
+
+        if book["id"] == book_id:
+
+            print("\nLeave blank to keep current value.\n")
+
+            new_title = input(f"New Title ({book['title']}): ").strip()
+            new_author = input(f"New Author ({book['author']}): ").strip()
+
+            if new_title:
+                book["title"] = new_title
+
+            if new_author:
+                book["author"] = new_author
+
+            save_books(books)
+
+            print("\nBook updated successfully.\n")
+
+            return
+
+    print("\nBook not found.\n")
+ 
