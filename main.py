@@ -12,13 +12,15 @@ def display_menu():
     print("\n" + "=" * 40)
     print("     LIBRARY MANAGEMENT SYSTEM")
     print("=" * 40)
-    print("1. Add Book")
+    print("1. Add Book") 
     print("2. View All Books")
     print("3. Search Book")
     print("4. Borrow Book")
     print("5. Return Book")
     print("6. Delete Book")
-    print("7. Exit")
+    print("7. Update Book")
+    print("8. Exit")
+    print("9. Exit")
     print("=" * 40)
 
 
