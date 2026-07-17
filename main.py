@@ -1,5 +1,6 @@
 from library import (
     add_book,
+    update_book,
     view_books,
     search_book,
     borrow_book,
@@ -20,7 +21,6 @@ def display_menu():
     print("6. Delete Book")
     print("7. Update Book")
     print("8. Exit")
-    print("9. Exit")
     print("=" * 40)
 
 
@@ -28,7 +28,7 @@ def main():
     while True:
         display_menu()
 
-        choice = input("Enter your choice (1-7): ").strip()
+        choice = input("Enter your choice (1-8): ").strip()
 
         if choice == "1":
             add_book()
@@ -47,8 +47,9 @@ def main():
 
         elif choice == "6":
             delete_book()
-
         elif choice == "7":
+            update_book()
+        elif choice == "8":
             print("\nThank you for using the Library Management System.")
             print("Goodbye!")
             break
